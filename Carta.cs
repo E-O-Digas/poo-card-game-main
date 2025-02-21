@@ -1,10 +1,10 @@
 public class Carta {
-    private string Descricao { get; }
-    private string Nome      { get; }
-
-    private int uso;  
-    private int tipo;  
     private int custo;
+    private int tipo;  
+    private int uso;  
+
+    public string Descricao { get; }
+    public string Nome      { get; }
 
     public int Custo { 
         get { return Custo; }

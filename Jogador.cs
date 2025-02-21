@@ -1,5 +1,4 @@
-public class Jogador
-{
+public class Jogador {
     public string Nome { get; }
     public int Energia { get; private set; }
     public int Vida    { get; private set; }
