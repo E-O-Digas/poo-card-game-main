@@ -5,8 +5,8 @@ public class Jogador {
 
     public Jogador(string nome) {
         Energia = 10;
-        Vida = 30;
-        Nome = nome;
+        Vida    = 30;
+        Nome    = nome;
 
     }
 
