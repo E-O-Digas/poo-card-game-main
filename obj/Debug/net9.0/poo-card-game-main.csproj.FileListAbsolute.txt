@@ -1,0 +1,15 @@
+D:\Codigos\C#\POO\poo-card-game-main\bin\Debug\net9.0\poo-card-game-main.exe
+D:\Codigos\C#\POO\poo-card-game-main\bin\Debug\net9.0\poo-card-game-main.deps.json
+D:\Codigos\C#\POO\poo-card-game-main\bin\Debug\net9.0\poo-card-game-main.runtimeconfig.json
+D:\Codigos\C#\POO\poo-card-game-main\bin\Debug\net9.0\poo-card-game-main.dll
+D:\Codigos\C#\POO\poo-card-game-main\bin\Debug\net9.0\poo-card-game-main.pdb
+D:\Codigos\C#\POO\poo-card-game-main\obj\Debug\net9.0\poo-card-game-main.GeneratedMSBuildEditorConfig.editorconfig
+D:\Codigos\C#\POO\poo-card-game-main\obj\Debug\net9.0\poo-card-game-main.AssemblyInfoInputs.cache
+D:\Codigos\C#\POO\poo-card-game-main\obj\Debug\net9.0\poo-card-game-main.AssemblyInfo.cs
+D:\Codigos\C#\POO\poo-card-game-main\obj\Debug\net9.0\poo-card-game-main.csproj.CoreCompileInputs.cache
+D:\Codigos\C#\POO\poo-card-game-main\obj\Debug\net9.0\poo-card-game-main.sourcelink.json
+D:\Codigos\C#\POO\poo-card-game-main\obj\Debug\net9.0\poo-card-game-main.dll
+D:\Codigos\C#\POO\poo-card-game-main\obj\Debug\net9.0\refint\poo-card-game-main.dll
+D:\Codigos\C#\POO\poo-card-game-main\obj\Debug\net9.0\poo-card-game-main.pdb
+D:\Codigos\C#\POO\poo-card-game-main\obj\Debug\net9.0\poo-card-game-main.genruntimeconfig.cache
+D:\Codigos\C#\POO\poo-card-game-main\obj\Debug\net9.0\ref\poo-card-game-main.dll

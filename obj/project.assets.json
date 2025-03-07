@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Codigos\\C#\\POO\\poo-card-game-main\\src\\poo-card-game-main.csproj",
+      "projectUniqueName": "D:\\Codigos\\C#\\POO\\poo-card-game-main\\poo-card-game-main.csproj",
       "projectName": "poo-card-game-main",
-      "projectPath": "D:\\Codigos\\C#\\POO\\poo-card-game-main\\src\\poo-card-game-main.csproj",
+      "projectPath": "D:\\Codigos\\C#\\POO\\poo-card-game-main\\poo-card-game-main.csproj",
       "packagesPath": "C:\\Users\\guito\\.nuget\\packages\\",
-      "outputPath": "D:\\Codigos\\C#\\POO\\poo-card-game-main\\src\\obj\\",
+      "outputPath": "D:\\Codigos\\C#\\POO\\poo-card-game-main\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\guito\\AppData\\Roaming\\NuGet\\NuGet.Config"
