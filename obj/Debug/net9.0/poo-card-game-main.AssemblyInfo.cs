@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("poo-card-game-main")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff86cb325a5fba2738e9f48b54913738f0f9381e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+879c2c07b4b6dcdf27c9a71342978791c3bb4ca0")]
 [assembly: System.Reflection.AssemblyProductAttribute("poo-card-game-main")]
 [assembly: System.Reflection.AssemblyTitleAttribute("poo-card-game-main")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

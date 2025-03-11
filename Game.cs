@@ -80,7 +80,7 @@ class Game
         Console.WriteLine("-----Versus-----");
         Console.WriteLine($"Computador ({computador.Nome}) - Vida: {computador.Vida} | Energia: {computador.Energia}");
 
-        while (usuario.Vida >= 0 || computador.Vida >= 0)
+        while (usuario.Vida >= 0 && computador.Vida >= 0)
         {
             Console.WriteLine("\nSelecione uma das opções, 1-> Pegar mais cartas 2-> Ver suas cartas 3-> Restaurar energia\n");
 
