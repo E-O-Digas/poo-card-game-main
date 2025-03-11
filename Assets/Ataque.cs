@@ -10,24 +10,17 @@ public class Ataque : Carta
 
     public override bool UsarCarta(Jogador jogador, Jogador oponente)
     {
-        try
-        {
-            if (!oponente.ReceberDano(this))
-            {
+        try{
+            if (!oponente.ReceberDano(this)){
                 Console.WriteLine($"{jogador.Nome} venceu. Fim de combate");
                 return false;
 
-            }
-            else
-            {
-                if (jogador.ConsumirEnergia(this))
-                {
+            }else{
+                if (jogador.ConsumirEnergia(this)){
                     Console.WriteLine($"Dano causado ao {oponente.Nome} de {Dano} e consumiu {Custo} de energia");
                     return true;
 
-                }
-                else
-                {
+                }else{
                     Console.WriteLine("Energia Insuficiente!");
                     return false;
 
@@ -35,9 +28,7 @@ public class Ataque : Carta
 
             }
 
-        }
-        catch (System.Exception)
-        {
+        }catch (System.Exception){
 
             throw;
         }

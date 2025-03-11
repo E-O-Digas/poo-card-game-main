@@ -32,7 +32,6 @@ public class Jogador {
             return false;
         
         else {
-            Energia -= carta.Custo;
             return true;    
 
         }
@@ -44,11 +43,9 @@ public class Jogador {
             return false;
 
         else{
-            Vida += carta.Vida;
-            return true;
-
+            return true;  
+  
         }
-        
     }
 
     public bool ReceberDano(Ataque carta){
