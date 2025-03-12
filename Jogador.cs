@@ -27,36 +27,18 @@ public class Jogador {
         return Energia;
     }
 
-    public bool ConsumirEnergia(Carta carta){
-        if(Energia - carta.Custo < 0)
-            return false;
-        
-        else {
-            return true;    
-
-        }
+    public void ConsumirEnergia(int custo){
+        Energia -= custo;
 
     }
 
-    public bool RestaurarVida(Defesa carta){
-        if (Vida >= 30)
-            return false;
+    public void RestaurarVida(int recuperarVida){
+        Vida += recuperarVida;
 
-        else{
-            return true;  
-  
-        }
     }
 
-    public bool ReceberDano(Ataque carta){
-        if(Vida - carta.Dano <= 0)
-            return false;
-
-        else {
-            Vida -= carta.Dano; 
-            return true;
-        
-        }
+    public void ReceberDano(int dano){
+        Vida -= dano;
         
     }
 
@@ -100,15 +82,11 @@ public class Jogador {
     }
 
     public string VerMao(){
-        Carta carta;
         string res = "";
-
-        for(int item = 0; item < Mao.Count; item++){
-            carta = Mao.ElementAt(item);
-            res += $"Carta {item+1}° Nome: {carta.Nome} Descrição: {carta.Descricao} Custo:{carta.Custo} \n";
         
-        }
-
+        for(int item = 0; item < Mao.Count; item++)
+            res += $"Carta {item+1}° - Nome: {Mao.ElementAt(item).Nome} Descrição: {Mao.ElementAt(item).Descricao} Custo:{Mao.ElementAt(item).Custo} \n";
+        
         return res;
 
     }

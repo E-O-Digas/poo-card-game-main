@@ -1,36 +1,30 @@
-public class Ataque : Carta
-{
+public class Ataque : Carta{
     public int Dano { get; }
 
-    public Ataque(string nome, string descricao, int custo, int dano) : base(nome, descricao, custo)
-    {
+    public Ataque(string nome, string descricao, int custo, int dano) : base(nome, descricao, custo){
         Dano = dano;
 
     }
 
-    public override bool UsarCarta(Jogador jogador, Jogador oponente)
-    {
+    public override bool UsarCarta(Jogador jogador, Jogador oponente){
         try{
-            if (!oponente.ReceberDano(this)){
-                Console.WriteLine($"{jogador.Nome} venceu. Fim de combate");
-                return false;
+            if (jogador.Energia - this.Custo >= 0) {
+                if (oponente.Vida - this.Dano > 0) {
+                    jogador.ConsumirEnergia(this.Custo);
 
-            }else{
-                if (jogador.ConsumirEnergia(this)){
-                    Console.WriteLine($"Dano causado ao {oponente.Nome} de {Dano} e consumiu {Custo} de energia");
+                    oponente.ReceberDano(this.Dano);
+
                     return true;
 
-                }else{
-                    Console.WriteLine("Energia Insuficiente!");
-                    return false;
+                } else return false;
+                
 
-                }
+            } else return false;
 
-            }
-
+            
         }catch (System.Exception){
-
             throw;
+
         }
 
     }

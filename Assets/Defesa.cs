@@ -1,42 +1,28 @@
-public class Defesa : Carta
-{
+public class Defesa : Carta{
     public int Vida { get; }
 
-    public Defesa(string nome, string descricao, int custo, int vida) : base(nome, descricao, custo)
-    {
+    public Defesa(string nome, string descricao, int custo, int vida) : base(nome, descricao, custo){
         Vida = vida;
 
     }
 
-    public override bool UsarCarta(Jogador jogador, Jogador oponente)
-    {
+    public override bool UsarCarta(Jogador jogador, Jogador oponente) {
         try{
-            if (jogador.ConsumirEnergia(this)){
-                if (jogador.RestaurarVida(this)){
-                    if (Vida + carta.Vida < 30){
-                        Vida += carta.Vida;
+            if (jogador.Energia - this.Custo >= 0) {
+                if (jogador.Vida + this.Vida <= 30) {
+                    jogador.ConsumirEnergia(this.Custo);
 
-                    }else{
-                        Vida = Vida + carta.Vida - (Vida - 30);
+                    jogador.RestaurarVida(this.Vida);
 
-                    }
-
-                    Energia -= carta.Custo;
-                    Console.WriteLine($"O {jogador.Nome} recuperou {Vida} de vida e consumiu {Custo}");
                     return true;
 
-                }else {
-                    Console.WriteLine("Vida ja cheia!");
-                    return false;
-                }
+                } else return false;
 
-            }else{
-                Console.WriteLine("Energia Insuficiente!");
-                return false;
-
-            }
-        }catch (System.Exception){
+            } else return false;
+            
+        } catch (System.Exception) {
             throw;
+
         }
     }
 }

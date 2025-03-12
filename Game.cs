@@ -6,8 +6,6 @@ class Game
 
     public List<Carta> maoJ, maoC;
 
-    public Carta carta;
-
     private Jogador usuario, computador;
 
     public Game()
