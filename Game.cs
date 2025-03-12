@@ -1,15 +1,13 @@
 using System.Collections.Generic;
 
-class Game
-{
+class Game {
     public List<Carta> monte;
 
     public List<Carta> maoJ, maoC;
 
     private Jogador usuario, computador;
 
-    public Game()
-    {
+    public Game() {
         monte = new List<Carta>();
 
         maoJ = new List<Carta>();
@@ -73,23 +71,28 @@ class Game
 
         Console.WriteLine("Inicio de jogo");
 
-        Console.WriteLine($"Jogador ({usuario.Nome}) - Vida: {usuario.Vida} | Energia: {usuario.Energia}");
+        Console.WriteLine($"Jogador ({usuario.Nome}) - Vida: {usuario.Vida} | Energia: {usuario.Energia}\n");
         Console.WriteLine("-----Versus-----");
-        Console.WriteLine($"Computador ({computador.Nome}) - Vida: {computador.Vida} | Energia: {computador.Energia}");
+        Console.WriteLine($"\nComputador ({computador.Nome}) - Vida: {computador.Vida} | Energia: {computador.Energia}\n");
 
         while (usuario.Vida >= 0 && computador.Vida >= 0) {
-            Console.WriteLine("\nSelecione uma das opções, 1-> Pegar mais cartas 2-> Ver suas cartas 3-> Restaurar energia\n");
+            int rounds= 1;
+            
+            Console.Clear();
+            Console.WriteLine($"Inicio da {rounds}° rodada.\n");
+            
+            Console.WriteLine("Selecione uma das opções, 1-> Pegar mais cartas 2-> Ver suas cartas 3-> Restaurar energia\n");
 
             try {
                 opcaoUsuario1 = Console.ReadLine()!;
 
                 switch (opcaoUsuario1) {
                     case "1":
-                        Console.WriteLine("\nDigite a quantidade de cartas a serem pegas do Deck: \n");
+                        Console.WriteLine("\nDigite a quantidade de cartas a serem pegas do Deck: ");
                         qtdCartas = Console.ReadLine()!;
 
                         Console.WriteLine($"\nJogador 1 pegou mais {qtdCartas} cartas\n");
-                        usuario.PegarCartas(Int32.Parse(qtdCartas));
+                        usuario.PegarCartas(int.Parse(qtdCartas));
 
                         break;
 
@@ -269,6 +272,9 @@ class Game
             Console.WriteLine($"Jogador ({usuario.Nome}) - Vida:{usuario.Vida} Energia:{usuario.Energia}\n");
             Console.WriteLine($"Computador ({computador.Nome}) - Vida:{computador.Vida} Energia:{computador.Energia}\n");
 
+            Console.WriteLine($"Fim da {rounds}° rodada.\n");
+            
+            rounds++;
         }
 
         if (usuario.Vida <= 0) Console.WriteLine($"O jogador {usuario.Nome} morreu! Fim de jogo.\n Parabens {computador.Nome}, voce venceu!");
