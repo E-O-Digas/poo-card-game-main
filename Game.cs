@@ -69,14 +69,16 @@ class Game {
     public void Run() {
         string opcaoComputador1, opcaoUsuario1, opcaoComputador2, opcaoUsuario2, qtdCartas;
 
-        Console.WriteLine("Inicio de jogo");
-
-        Console.WriteLine($"Jogador ({usuario.Nome}) - Vida: {usuario.Vida} | Energia: {usuario.Energia}\n");
-        Console.WriteLine("-----Versus-----");
-        Console.WriteLine($"\nComputador ({computador.Nome}) - Vida: {computador.Vida} | Energia: {computador.Energia}\n");
-
         while (usuario.Vida >= 0 && computador.Vida >= 0) {
             int rounds= 1;
+            
+            Console.WriteLine("Inicio de jogo\n");
+
+            Console.WriteLine($"Jogador      ({usuario.Nome}) - Vida: {usuario.Vida}     | Energia: {usuario.Energia}");
+
+            Console.WriteLine("\n-----Versus-----\n");
+
+            Console.WriteLine($"Computador ({computador.Nome}) - Vida: {computador.Vida} | Energia: {computador.Energia}");
             
             Console.Clear();
             Console.WriteLine($"Inicio da {rounds}° rodada.\n");
@@ -91,7 +93,7 @@ class Game {
                         Console.WriteLine("\nDigite a quantidade de cartas a serem pegas do Deck: ");
                         qtdCartas = Console.ReadLine()!;
 
-                        Console.WriteLine($"\nJogador 1 pegou mais {qtdCartas} cartas\n");
+                        Console.WriteLine($"\nJogador 1 pegou mais {qtdCartas} cartas");
                         usuario.PegarCartas(int.Parse(qtdCartas));
 
                         break;
@@ -105,48 +107,47 @@ class Game {
 
                         switch (opcaoUsuario2) {
                             case "1":
-                                Console.WriteLine($"Jogador 1 tentou usar a carta {maoJ.ElementAt(0).Nome}\n");
+                                Console.WriteLine($"Jogador 1 tentou usar a carta - ({maoJ.ElementAt(0).Nome})\n");
                                 
-                                if(maoJ.ElementAt(0).UsarCarta(usuario, computador)) maoJ.RemoveAt(0);
+                                if (maoJ.ElementAt(0).UsarCarta(usuario, computador)) maoJ.RemoveAt(0);
                                 
-                                else
-                                    Console.WriteLine($"Jogador 1 tentou usar a carta {maoJ.ElementAt(0).Nome} e nao conseguiu\n");
+                                else Console.WriteLine($"E nao conseguiu\n");
 
                                 break;
 
                             case "2":
-                                Console.WriteLine($"Jogador 1 tentou usar a carta {maoJ.ElementAt(1).Nome}");
+                                Console.WriteLine($"Jogador 1 tentou usar a carta - ({maoJ.ElementAt(1).Nome})");
 
-                                if(maoJ.ElementAt(1).UsarCarta(usuario, computador)) maoJ.RemoveAt(1);
+                                if (maoJ.ElementAt(1).UsarCarta(usuario, computador)) maoJ.RemoveAt(1);
                                 
-                                else Console.WriteLine($"Jogador 1 tentou usar a carta {maoJ.ElementAt(1).Nome} e nao conseguiu\n");
+                                else Console.WriteLine($"E nao conseguiu\n");
 
                                 break;
 
                             case "3":
-                                Console.WriteLine($"Jogador 1 tentou usar a carta {maoJ.ElementAt(2).Nome}");
+                                Console.WriteLine($"Jogador 1 tentou usar a carta - ({maoJ.ElementAt(2).Nome})");
 
                                 if(maoJ.ElementAt(2).UsarCarta(usuario, computador)) maoJ.RemoveAt(2);
 
-                                else Console.WriteLine($"Jogador 1 tentou usar a carta {maoJ.ElementAt(2).Nome} e nao conseguiu\n");
-
+                                else Console.WriteLine($"E nao conseguiu\n");
+                                
                                 break;
 
                             case "4":
-                                Console.WriteLine($"Jogador 1 tentou usar a carta {maoJ.ElementAt(3).Nome}");
+                                Console.WriteLine($"Jogador 1 tentou usar a carta - ({maoJ.ElementAt(3).Nome})");
 
-                                if(maoJ.ElementAt(3).UsarCarta(usuario, computador)) maoJ.RemoveAt(3);
+                                if (maoJ.ElementAt(3).UsarCarta(usuario, computador)) maoJ.RemoveAt(3);
                                 
-                                else Console.WriteLine($"Jogador 1 tentou usar a carta {maoJ.ElementAt(3).Nome} e nao conseguio\n");
+                                else Console.WriteLine($"E nao conseguiu\n");
 
                                 break;
 
                             case "5":
-                                Console.WriteLine($"Jogador 1 tentou usar a carta {maoJ.ElementAt(4).Nome}");
+                                Console.WriteLine($"Jogador 1 tentou usar a carta - ({maoJ.ElementAt(4).Nome})");
 
-                                if(maoJ.ElementAt(4).UsarCarta(usuario, computador)) maoJ.RemoveAt(4);
+                                if (maoJ.ElementAt(4).UsarCarta(usuario, computador)) maoJ.RemoveAt(4);
                                 
-                                else Console.WriteLine($"Jogador 1 tentou usar a carta {maoJ.ElementAt(4).Nome} e nao conseguio\n");
+                                else Console.WriteLine($"E nao conseguiu\n");
 
                                 break;
 
@@ -202,46 +203,46 @@ class Game {
                         switch (opcaoComputador2)
                         {
                             case "1":
-                                Console.WriteLine($"Jogador 2 tentou usar a carta {maoC.ElementAt(0).Nome}");
+                                Console.WriteLine($"Jogador 2 tentou usar a carta - ({maoC.ElementAt(0).Nome})\n");
                                 if (maoC.ElementAt(0).UsarCarta(computador, usuario)) maoC.RemoveAt(0);
                                 
-                                else Console.WriteLine($"Jogador 2 tentou usar a carta {maoC.ElementAt(0).Nome} e nao conseguio\n");
+                                else Console.WriteLine($"E nao conseguio\n");
 
                                 break;
 
                             case "2":
-                                Console.WriteLine($"Jogador 2 tentou usar a carta {maoC.ElementAt(1).Nome}");
+                                Console.WriteLine($"Jogador 2 tentou usar a carta - ({maoC.ElementAt(1).Nome}) \n");
 
-                                if(maoC.ElementAt(1).UsarCarta(computador, usuario)) maoC.RemoveAt(1);
+                                if (maoC.ElementAt(1).UsarCarta(computador, usuario)) maoC.RemoveAt(1);
                                 
-                                else Console.WriteLine($"Jogador 2 tentou usar a carta {maoC.ElementAt(1).Nome} e nao conseguio\n");
+                                else Console.WriteLine($"E nao conseguio\n");
 
                                 break;
 
                             case "3":
-                                Console.WriteLine($"Jogador 2 tentou usar a carta {maoC.ElementAt(2).Nome}");
+                                Console.WriteLine($"Jogador 2 tentou usar a carta - ({maoC.ElementAt(2).Nome}) \n");
 
-                                if(maoC.ElementAt(2).UsarCarta(computador, usuario)) maoC.RemoveAt(2);
+                                if (maoC.ElementAt(2).UsarCarta(computador, usuario)) maoC.RemoveAt(2);
                                 
-                                else Console.WriteLine($"Jogador 2 tentou usar a carta {maoC.ElementAt(2).Nome} e nao conseguio\n");
+                                else Console.WriteLine($"E nao conseguio\n");
 
                                 break;
 
                             case "4":
-                                Console.WriteLine($"Jogador 2 tentou usar a carta {maoC.ElementAt(3).Nome}");
+                                Console.WriteLine($"Jogador 2 tentou usar a carta - ({maoC.ElementAt(3).Nome}) \n");
 
-                                if(maoC.ElementAt(3).UsarCarta(computador, usuario)) maoC.RemoveAt(3);
+                                if (maoC.ElementAt(3).UsarCarta(computador, usuario)) maoC.RemoveAt(3);
                                 
-                                else Console.WriteLine($"Jogador 2 tentou usar a carta {maoC.ElementAt(3).Nome} e nao conseguio\n");
+                                else Console.WriteLine($"E nao conseguio\n");
 
                                 break;
 
                             case "5":
-                                Console.WriteLine($"Jogador 2 tentou usar a carta {maoC.ElementAt(4).Nome}");
+                                Console.WriteLine($"Jogador 2 tentou usar a carta - ({maoC.ElementAt(4).Nome}) \n");
 
                                 if(maoC.ElementAt(4).UsarCarta(computador, usuario)) maoC.RemoveAt(4);
                                 
-                                else Console.WriteLine($"Jogador 2 tentou usar a carta {maoC.ElementAt(4).Nome} e nao conseguio\n");
+                                else Console.WriteLine($"E nao conseguio\n");
 
                                 break;
 
@@ -269,7 +270,7 @@ class Game {
 
             Console.WriteLine("\nFim do turno do Jogador 2.\n");
 
-            Console.WriteLine($"Jogador ({usuario.Nome}) - Vida:{usuario.Vida} Energia:{usuario.Energia}\n");
+            Console.WriteLine($"Jogador    ({usuario.Nome})    - Vida:{usuario.Vida}    Energia:{usuario.Energia}   \n");
             Console.WriteLine($"Computador ({computador.Nome}) - Vida:{computador.Vida} Energia:{computador.Energia}\n");
 
             Console.WriteLine($"Fim da {rounds}° rodada.\n");
