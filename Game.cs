@@ -185,21 +185,21 @@ class Game
             {
                 maoC = computador.getMao();
 
-                if (maoC.Count() > 0)
-                    opcaoComputador1 = "2";
-
-                else if(computador.Energia == 0)
+                if (computador.Energia <= 7)
                     opcaoComputador1 = "3";
+
+                else if (maoC.Count() > 0)
+                    opcaoComputador1 = "2";
                 
                 else
                     opcaoComputador1 = "1";
-
                 
 
                 switch (opcaoComputador1)
                 {
                     case "1":
-                        Console.WriteLine("\nJogador 2 pegou mais cartas\n");
+                        Console.WriteLine("\nJogador 2 pegou mais cartas");
+
                         computador.PegarCartas(5);
 
                         break;
@@ -207,7 +207,7 @@ class Game
                     case "2":
                         Random random = new Random();
 
-                        opcaoComputador2 = random.Next(1, 5).ToString();
+                        opcaoComputador2 = random.Next(1, maoC.Count).ToString();
 
                         switch (opcaoComputador2)
                         {
@@ -268,7 +268,7 @@ class Game
                         break;
 
                     case "3":
-                        Console.WriteLine("\nJogador 2 tentou recuperar energia.\n");
+                        Console.WriteLine("\nJogador 2 tentou recuperar energia.");
                         computador.RestaurarEnergia();
                         break;
 
@@ -277,17 +277,16 @@ class Game
 
                 }
 
-            }
-            catch (System.Exception)
-            {
+            } catch (System.Exception) {
                 throw;
+
             }
 
 
             Console.WriteLine("\nFim do turno do Jogador 2.\n");
 
-            Console.WriteLine($"Jogador ({usuario.Nome}) - Vida: {usuario.Vida} | Energia: {usuario.Energia}\n");
-            Console.WriteLine($"Computador ({computador.Nome}) - Vida: {computador.Vida} | Energia: {computador.Energia}\n");
+            Console.WriteLine($"Jogador ({usuario.Nome}) - Vida:{usuario.Vida} Energia:{usuario.Energia}\n");
+            Console.WriteLine($"Computador ({computador.Nome}) - Vida:{computador.Vida} Energia:{computador.Energia}\n");
 
 
         }

@@ -15,16 +15,14 @@ public class Jogador {
 
     }
 
-    public int RestaurarEnergia(){
-        if (Energia != 10) {
-            int novaEnergia = Energia + 2;
+    public void RestaurarEnergia(){
+        if (Energia < 10) {
+            Energia = Energia + 2;
 
-            if (novaEnergia >= 10) 
+            if (Energia + 2 > 10) 
                 Energia -= Energia - 10;
             
         }
-
-        return Energia;
     }
 
     public void ConsumirEnergia(int custo){
