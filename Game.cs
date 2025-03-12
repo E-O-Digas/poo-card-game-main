@@ -173,7 +173,7 @@ class Game {
             }
 
 
-            Console.WriteLine("\nFim do turno do Jogador 1.\n");
+            Console.WriteLine("Fim do turno do Jogador 1.\n");
 
             try {
                 maoC = computador.getMao();
@@ -207,7 +207,7 @@ class Game {
                                 Console.WriteLine($"Jogador 2 tentou usar a carta - ({maoC.ElementAt(0).Nome})\n");
                                 if (maoC.ElementAt(0).UsarCarta(computador, usuario)) maoC.RemoveAt(0);
                                 
-                                else Console.WriteLine($"E nao conseguio\n");
+                                else Console.WriteLine($"E nao conseguio");
 
                                 break;
 
@@ -216,7 +216,7 @@ class Game {
 
                                 if (maoC.ElementAt(1).UsarCarta(computador, usuario)) maoC.RemoveAt(1);
                                 
-                                else Console.WriteLine($"E nao conseguio\n");
+                                else Console.WriteLine($"E nao conseguio");
 
                                 break;
 
@@ -225,7 +225,7 @@ class Game {
 
                                 if (maoC.ElementAt(2).UsarCarta(computador, usuario)) maoC.RemoveAt(2);
                                 
-                                else Console.WriteLine($"E nao conseguio\n");
+                                else Console.WriteLine($"E nao conseguio");
 
                                 break;
 
@@ -234,7 +234,7 @@ class Game {
 
                                 if (maoC.ElementAt(3).UsarCarta(computador, usuario)) maoC.RemoveAt(3);
                                 
-                                else Console.WriteLine($"E nao conseguio\n");
+                                else Console.WriteLine($"E nao conseguio");
 
                                 break;
 
@@ -243,7 +243,7 @@ class Game {
 
                                 if(maoC.ElementAt(4).UsarCarta(computador, usuario)) maoC.RemoveAt(4);
                                 
-                                else Console.WriteLine($"E nao conseguio\n");
+                                else Console.WriteLine($"E nao conseguio");
 
                                 break;
 
@@ -255,7 +255,7 @@ class Game {
                         break;
 
                     case "3":
-                        Console.WriteLine("\nJogador 2 tentou recuperar energia.");
+                        Console.WriteLine("Jogador 2 tentou recuperar energia.\n");
                         computador.RestaurarEnergia();
                         break;
 
@@ -271,12 +271,12 @@ class Game {
 
             Console.WriteLine("\nFim do turno do Jogador 2.\n");
 
-            Console.WriteLine($"Jogador    ({usuario.Nome})    - Vida:{usuario.Vida}    Energia:{usuario.Energia}   \n");
+            Console.WriteLine($"Jogador ({usuario.Nome}) - Vida:{usuario.Vida} Energia:{usuario.Energia}   \n");
             Console.WriteLine($"Computador ({computador.Nome}) - Vida:{computador.Vida} Energia:{computador.Energia}\n");
 
             Console.WriteLine($"Fim da {rounds}° rodada.\n");
 
-            Task.Delay(1000);
+            Thread.Sleep(5000);
             
             rounds++;
         }
