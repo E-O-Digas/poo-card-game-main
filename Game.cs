@@ -275,6 +275,8 @@ class Game {
             Console.WriteLine($"Computador ({computador.Nome}) - Vida:{computador.Vida} Energia:{computador.Energia}\n");
 
             Console.WriteLine($"Fim da {rounds}° rodada.\n");
+
+            Task.Delay(1000);
             
             rounds++;
         }
