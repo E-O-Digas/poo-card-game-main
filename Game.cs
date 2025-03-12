@@ -72,15 +72,15 @@ class Game {
         while (usuario.Vida >= 0 && computador.Vida >= 0) {
             int rounds= 1;
             
+            Console.Clear();
             Console.WriteLine("Inicio de jogo\n");
 
             Console.WriteLine($"Jogador      ({usuario.Nome}) - Vida: {usuario.Vida}     | Energia: {usuario.Energia}");
 
             Console.WriteLine("\n-----Versus-----\n");
 
-            Console.WriteLine($"Computador ({computador.Nome}) - Vida: {computador.Vida} | Energia: {computador.Energia}");
+            Console.WriteLine($"Computador ({computador.Nome}) - Vida: {computador.Vida} | Energia: {computador.Energia}\n");
             
-            Console.Clear();
             Console.WriteLine($"Inicio da {rounds}° rodada.\n");
             
             Console.WriteLine("Selecione uma das opções, 1-> Pegar mais cartas 2-> Ver suas cartas 3-> Restaurar energia\n");
@@ -169,6 +169,7 @@ class Game {
                 }
             } catch (System.Exception) {
                 throw;
+
             }
 
 

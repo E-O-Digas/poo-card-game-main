@@ -7,22 +7,24 @@ public class Ataque : Carta{
     }
 
     public override bool UsarCarta(Jogador jogador, Jogador oponente){
-        try{
+        try {
             if (jogador.Energia - this.Custo >= 0) {
-                if (oponente.Vida - this.Dano > 0) {
-                    jogador.ConsumirEnergia(this.Custo);
+                jogador.ConsumirEnergia(this.Custo);
 
-                    oponente.ReceberDano(this.Dano);
-
-                    return true;
-
-                } else return false;
+                oponente.ReceberDano(this.Dano);
+                
+                if (oponente.Vida <= 0) {
+                    throw new Exception("Fim de jogo.");
+                    
+                }
+            
+                return true;
                 
 
             } else return false;
 
             
-        }catch (System.Exception){
+        } catch (System.Exception) {
             throw;
 
         }
