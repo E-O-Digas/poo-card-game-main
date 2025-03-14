@@ -1,7 +1,7 @@
 public class Ataque : Carta{
-    public int Dano { get; }
+    public string Dano { get; }
 
-    public Ataque(string nome, string descricao, int custo, int dano) : base(nome, descricao, custo){
+    public Ataque(string nome, string descricao, int custo, string dano) : base(nome, descricao, custo){
         Dano = dano;
 
     }
@@ -17,10 +17,9 @@ public class Ataque : Carta{
                     throw new Exception("Fim de jogo.");
                     
                 }
-            
+                
                 return true;
                 
-
             } else return false;
 
             

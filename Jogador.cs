@@ -30,13 +30,13 @@ public class Jogador {
 
     }
 
-    public void RestaurarVida(int recuperarVida){
-        Vida += recuperarVida;
+    public void RestaurarVida(string recuperarVida){
+        Vida += int.Parse(recuperarVida);
 
     }
 
-    public void ReceberDano(int dano){
-        Vida -= dano;
+    public void ReceberDano(string dano){
+        Vida -= int.Parse(dano);
         
     }
 
@@ -77,16 +77,6 @@ public class Jogador {
         else        
             GerarMao(Deck);
      
-    }
-
-    public string VerMao(){
-        string res = "";
-        
-        for(int item = 0; item < Mao.Count; item++)
-            res += $"Carta {item+1}° - Nome: {Mao.ElementAt(item).Nome} Descrição: {Mao.ElementAt(item).Descricao} Custo:{Mao.ElementAt(item).Custo} \n";
-        
-        return res;
-
     }
 
     public List<Carta> getMao(){
